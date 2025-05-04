@@ -1,0 +1,36 @@
+=GOALS=
+I want to make a program that asks the user three things, encode
+something, decode something, or quit. That functionality is handled in the
+main already written. The functions I need to make are menu(), encode(),
+and decode().
+Menu is a simple while loop displaying the menu
+SECRET DECODER MENU
+
+  0) Quit
+  1) Encode
+  2) Decode
+
+What do you want to do? :
+and taking user input making sure they're saying an acceptable input.
+Telling them you don't understand otherwise.
+It ends when it's 0, 1, or 2 and returns that val to main.
+
+encode() takes the user's string input and then turns it into uppercase,
+then loops through every letter finding the index of that letter in the
+alpha list and finding the corresponding letter with the same index in
+key. That stores the char found in key with that index in output var.
+Print output after loop and be done.
+
+decode() takes user's string input that should be upper case but turns it
+into uppercase just in case then does the same thing encode does but finds
+the index in key and translates to alpha. Prints output after lower casing
+it then .capitalize()
+
+=INPUTS=
+Mentioned above
+
+=OUTPUTS=
+Mentioned above
+
+=STEPS=
+Mentioned above

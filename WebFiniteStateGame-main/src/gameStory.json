@@ -1,0 +1,178 @@
+{
+  "initial": {
+    "title": "Are you ready to start the Finite State Game?",
+    "img": "https://c.tenor.com/5aZuSQxktBAAAAAC/chewing-monster.gif",
+    "choices": [{ "text": "Oh boy", "next": "intro" }]
+  },
+  "intro": {
+    "title": "You are enjoying a pleasent day in San Francisco",
+    "choices": [
+      {
+        "text": "Ok I enjoy San Fran (that's what cool people call San Francsico)",
+        "next": "minion"
+      },
+      { "text": "Ew, west coast worst coast", "next": "badEnd" }
+    ]
+  },
+  "minion": {
+    "title": "All of a sudden you see the minions! They look so cute!!",
+    "img": "https://deadline.com/wp-content/uploads/2022/07/minions-suits.jpeg",
+    "choices": [
+      { "text": "Hi minions!!", "next": "hungryMinion" },
+      { "text": "avoid at all costs", "next": "badEnd" }
+    ]
+  },
+  "badEnd": {
+    "title": "That wasn't very nice, sorry you're going to have to refresh if you want to try again. Be nicer next time.",
+    "choices": []
+  },
+  "hungryMinion": {
+    "title": "The minions tell you \"Bo be bo ba ka? Badda bedo bo ba kana!\"",
+    "img": "https://upload.wikimedia.org/wikipedia/en/7/7d/Minions_characters.png",
+    "choices": [
+      { "text": "Oh no! I don't speak minion", "next": "stupid" },
+      { "text": "I think they're hungry", "next": "banana" }
+    ]
+  },
+  "banana": {
+    "title": "You're right! The poor guys are starving for some bananas, will you help them look for them?",
+    "img": "https://c.tenor.com/s3XTrvMJ7-0AAAAC/hungry-minions.gif",
+    "choices": [
+      { "text": "Of course I'll help!", "next": "bannanaSearch" },
+      { "text": "I don't know these guys", "next": "depressedMinion" }
+    ]
+  },
+  "bannanaSearch": {
+    "title": "Awesome! Let's look around San Francsico and see if we can find some bananas!",
+    "img": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/11494273/f21601f9-31a4-4ebc-bd74-de0ec9048ea6.png",
+    "choices": [{ "text": "Lets go!", "next": "sf" }]
+  },
+  "sf": [
+    {
+      "id": "goldengatebridge",
+      "title": "Wow, the golden gate bridge! A beautiful staple of San Fran, but no bananas in sight!",
+      "img": "https://cdn.fansshare.com/image/thegoldengatebridge/golden-gate-bridge-san-francisco-minions-taking-over-famous-places-all-around-the-world-empire-state-building-1953972388.jpg",
+      "choices": [
+        { "text": "Let's cross it and find those Bananas!", "next": "sf" }
+      ]
+    },
+    {
+      "id": "coittower",
+      "title": "Coit Tower, a beautiful landmark of the city. Bananaless unfortunately.",
+      "img": "https://blog.extranomical.com/wp-content/uploads/2018/01/coit-tower.png",
+      "choices": [{ "text": "Oh well, keep looking", "next": "sf" }]
+    },
+    {
+      "id": "pier39",
+      "title": "Pier 39! A beautiful boardwalk, and if you're lucky you can find some sea lions!",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pier_39_in_2021.jpg",
+      "choices": [
+        { "text": "I'm looking for bananas not sea lions", "next": "sf" }
+      ]
+    },
+    {
+      "id": "ferryBuilding",
+      "title": "The Ferry Building marketplace! A great spot to grab lunch when you're in the area",
+      "img": "https://media.cntraveler.com/photos/5d7a754b085341000833756b/16:9/w_2560,c_limit/Ferry-Building-Farmer's-Market-_GettyImages-164200471.jpg",
+      "choices": [{ "text": "No bananas here? Really?", "next": "sf" }]
+    },
+    {
+      "id": "tiledSteps",
+      "title": "The classic Avenue Tiled Steps! A beautiful public art display, no banana vendors around here though...",
+      "img": "https://atlas-assets.roadtrippers.com/uploads/place_image/image/2031680/-strip_-quality_60_-interlace_Plane_-resize_640x360_U__-gravity_center_-extent_640x360/place_image-image-41659fec-d789-44af-be5b-b320553aff37.jpg",
+      "choices": [
+        { "text": "Yeah doesn't look like a spot for a banana", "next": "sf" }
+      ]
+    },
+    {
+      "id": "alcatraz",
+      "title": "Oooh alcatraz, this prison has a whole lot of history, did you know native americans occupied this island for three years in the 70s?",
+      "img": "https://davestuartjorge.files.wordpress.com/2015/05/img_2900.jpg",
+      "choices": [
+        { "text": "That's crazy, no bananas though...", "next": "sf" }
+      ]
+    }
+  ],
+  "sadMinion": {
+    "title": "We've looked everywhere! It's like there's no bananas in the whole city! So sorry minions.",
+    "img": "https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1200/public/2022-07/VC-Minions-Movie_gty-1405105263-RM_1280x640.jpg?itok=i31GjFgk",
+    "choices": [{ "text": "Now I'm hungry", "next": "hungry" }]
+  },
+  "hungry": {
+    "title": "Well, there's a Bi-Rite Creamery nearby, do you want to eat something there?",
+    "img": "https://fastly.4sqi.net/img/general/200x200/lvMF6VBNKy95KbohMD6o177BHksDNjxDRMsZHxgMz5c.jpg",
+    "choices": [
+      { "text": "Nah it's over, I'm going home", "next": "depressedMinion" },
+      { "text": "Ok sure", "next": "BANANAICECREAM" },
+      {
+        "text": "wait, is this whole project an ad for Bi-Rite Creamery?",
+        "next": "um"
+      }
+    ]
+  },
+  "um": {
+    "title": "Um, uh I mean uh um no.",
+    "img": "https://c.tenor.com/pPnM7wANoVoAAAAM/flushed.gif",
+    "choices": [{ "text": "?", "next": "bucko" }]
+  },
+  "BANANAICECREAM": {
+    "title": "Wow! This place has banana ice cream! Bob especially can't wait to order it! You really saved the day!",
+    "img": "https://img.buzzfeed.com/buzzfeed-static/static/2022-07/27/20/tmp/c267d734a80b/tmp-name-2-4327-1658952425-31_dblbig.jpg",
+    "choices": [{ "text": "Just doing my minion duty", "next": "happyEnd" }]
+  },
+  "happyEnd": {
+    "title": "You found a banana treat after searching all the lovely spots of San Francsico! You won the Finitie State Game! Refresh to try for another ending ;)",
+    "img": "https://i.ytimg.com/vi/FbDdV6etYJQ/maxresdefault.jpg",
+    "choices": []
+  },
+  "bucko": {
+    "title": "Listen here bucko, stop asking questions and go back to the creamery. No one needs to know about this.",
+    "img": "https://a.pinatafarm.com/544x450/125dd734c2/gru-gun.jpg",
+    "choices": [
+      { "text": "alright alright I'm going", "next": "hungry" },
+      {
+        "text": "sorry the jig is up, I'm not falling for your propaganda",
+        "next": "agony"
+      }
+    ]
+  },
+  "depressedMinion": {
+    "title": "Those poor little guys, I guess no one can help them. Maybe if you refresh the page the day will end better.",
+    "img": "https://scontent-ort2-2.xx.fbcdn.net/v/t1.18169-9/18034161_1712912905403010_1975668315745589839_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=973b4a&_nc_ohc=LjdtdAoqPYMAX_GZuOE&_nc_ht=scontent-ort2-2.xx&oh=00_AT9f7EqlCVWIDlL_Cvv2phKk54ryVmAgiEU53FeWgLQOPg&oe=63427CE1",
+    "choices": []
+  },
+  "dissapointedMinion": {
+    "title": "Are you sure you can't help? Look how cute they are!",
+    "img": "https://s.abcnews.com/images/US/minions-3-ht-er-220630_1656610344347_hpMain_2_16x9_1600.jpg",
+    "choices": [
+      { "text": "Alright let's keep looking", "next": "sf" },
+      { "text": "No I'm done", "next": "depressedMinion" }
+    ]
+  },
+  "stupid": {
+    "title": "I can't believe you don't speak minion.",
+    "choices": [
+      { "text": "Sorry, it hasn't come up", "next": "think?" },
+      { "text": "Why should I have to learn minion?", "next": "badEnd" },
+      { "text": "This game's stupid, you get an F", "next": "andrewPlease" }
+    ]
+  },
+  "think?": {
+    "title": "That's ok, I can translate. They're basically just hungry.",
+    "choices": [{ "text": "They're Hungry?", "next": "banana?" }]
+  },
+  "andrewPlease": {
+    "id": "dissapointedMinion",
+    "title": "Dr. Harris please don't give me an F I swear this game is good you just have to choose another option and you'll have an amazing time I swear this state game is an amazing transformative experience it gets really good there are bananas in it and lots of funny lols please just give it another chance",
+    "img": "https://s.abcnews.com/images/US/minions-3-ht-er-220630_1656610344347_hpMain_2_16x9_1600.jpg",
+    "choices": [
+      { "text": "Ok, take me back a step", "next": "stupid" },
+      { "text": "sorry josh this sucks", "next": "agony" }
+    ]
+  },
+  "agony": {
+    "title": "",
+    "img": "https://c.tenor.com/dahUZmCkbAcAAAAC/agony.gif",
+    "choices": []
+  }
+}

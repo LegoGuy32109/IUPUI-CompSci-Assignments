@@ -1,0 +1,31 @@
+==MISSION STATEMENT==
+Im trying to make this program cooler, and flex coding knowledge by
+proving my effort for the sweet grade. I'd like to run with Mr. Harris'
+idea for vending machine functionality, so I'd like to display a list of
+options for the user to choose. I already have cool dictonary looping in
+my normal assignment, but ill use it here for the list too. The user picks
+the items from an ID system like A1 and types 'end' when they're through.
+Then it displays the total, and does the previous programs use of asking
+for payment and giving change.
+
+=INPUTS= User choices until they hit end
+
+=OUTPUTS= Total cost from their choices and change
+
+=STEPS=
+Create a dictonary with item names and cost, but NOT IDs yet, because it's
+easier for a computer to do that.
+
+Display items in dictonary with a for loop, in the process displaying them
+with an ID generated from an index as well as making a new dictonary with
+the IDs as the key and the values as an array with the name and cost. ID
+goes to the next letter every 6th item so when index%6==0, this resets
+index to 1. I want a machine with 5 items per row.
+
+While loop checking user input for the id of the item they want, like
+typing in a physical vending machine. If wrong, ask again, should take a1
+as well as A1 and such.
+
+Each successful ID say what they got and add that to the total price, then
+when that's over (type end) go calculate their change after they give
+their payment.

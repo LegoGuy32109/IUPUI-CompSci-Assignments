@@ -1,0 +1,162 @@
+;; This program was written by Josh hale
+begin:
+;; begin by checking if we're dividing or multiplying today
+lod multiOrDivid
+jmz multi
+;; the logic for divison is more complicated, with 4 seperate paths
+(which terms neg)
+lod b
+jmn dividCho
+;; if divisor is negative, go to divid2 otherwise normal divid
+lod a
+jmn divid2
+jmp divid
+dividCho:
+;; b has been proven negative, now the same check for the divisor
+lod a
+jmn divid4
+jmp divid3
+;; divison where both terms are positive (+a, +b)
+divid:
+;; loop starts by subtracting a from b
+lod b
+;; if b is 0 initially, or is 0 now the calculation is over
+jmz end
+sub a
+sto b
+;; check if b is now negative, we've gone to far and need to caculate
+remainder
+jmn remain
+;; increment the product for each subtraction (that didn't make b
+negative)
+lod product
+inc
+sto product
+;; restart the loop
+jmp divid
+;; division where (-a, +b)
+divid2:
+lod b
+jmz end
+;; adding a negative number functions identically to earlier
+add a
+sto b
+;; remainder needs to be calculated differently
+jmn remain2
+lod product
+;; the answer is negative, need to decrease
+dec
+sto product
+jmp divid2
+;; divison where (+a, -b)
+divid3:
+lod b
+jmz end
+;; adding +a to -b finds difference
+add a
+sto b
+;; subtracting what stored b is twice inverts sign, so jumping if the
+num was positive
+sub b
+;; PC is 0
+sub b
+;; PC is inverted b
+jmn remain3
+;; product will be negative
+lod product
+dec
+sto product
+jmp divid3
+;;divison where (-a, -b)
+divid4:
+lod b
+jmz end
+;; need to sub since same sign
+sub a
+sto b
+;; jump if positive (explained above)
+sub b
+sub b
+jmn remain4
+;; this time -/- is a + so increment
+lod product
+inc
+sto product
+jmp divid4
+;; current PC is b-a, with the result negative. Reversing the subtraction
+by adding
+;; gives the remainder, or what didn't fit in the division
+remain:
+add a
+sto r
+jmp end
+;; PC is (+b)-(-a) -> b+a, so sub instead
+remain2:
+sub a
+sto r
+jmp end
+;; PC is (-b)-(+a) -> -b-a, so add a BUT the remainder is positive. When b
+is - remainder
+;; is - so sub r twice inverts.
+remain3:
+add a
+sto r
+sub r
+sub r
+sto r
+jmp end
+;; PC is (-b)-(-a) -> -b+a, so sub a and same deal with remainder
+inverting as remain3
+remain4:
+sub a
+sto r
+sub r
+sub r
+sto r
+jmp end
+;; multiplication is easier to explain thank goodness
+multi:
+lod b
+;; if b 0 job done
+jmz end
+;; if b is negative calculations are run differently
+jmn bIsNeg
+;; b must be positive then so jump to bIsPos
+jmp bIsPos
+;; in this case b is positive (it doesn't matter if a is - or 0)
+bIsPos:
+;; b acts as a counter, so subtract b by one
+;; in this case the product is being added 'a' a total of 'b' times
+dec
+sto b
+;; add 'a' to product
+lod product
+add a
+sto product
+;; repeat (checking if b is 0 back in multi)
+jmp multi
+;; can you guess what b is here? can you?
+bIsNeg:
+;; b is still a counter but in this case needs to be incremented to get
+to 0
+inc
+sto b
+;; because b is neg, the result is negative too. If a is neg too, -(-a)
+product is +
+lod product
+sub a
+sto product
+jmp multi
+;; end the program
+end: hlt
+;; 0 if multiplication, 1 if dividing 'b' by 'a'
+multiOrDivid: 1
+;; product will be the product or quotient depending on calculation
+product: 0
+;; remainder will be set here
+r: 0
+;; the divisor or 'adder'
+a: -6
+;; the dividend or 'counter'
+b: 301
+;; I hope you like it :)

@@ -1,0 +1,27 @@
+// shared_lib.mpc copied from https://cs.iupui.edu/~hilljh/faqs/shared-library.php
+
+project (my_shared_lib) {
+	sharedname = my_shared_lib // Declares project as a shared library
+
+	dynamicflags += MY_SHARED_LIB_BUILD_DLL
+
+	dllout = .  // Defines location of generated shared library
+	libout = .  // Defines location of import library, (Windows only tho)
+
+	Source_Files {
+		my_shared_lib.cpp
+	}
+}
+
+// added from later in the tutorial
+project(shared_exe) {
+	exename = shared_exe
+	install = .
+	
+	libs += my_shared_lib
+	after += my_shared_lib 
+	
+	Source_Files {
+		shared_exe.cpp
+	}
+}

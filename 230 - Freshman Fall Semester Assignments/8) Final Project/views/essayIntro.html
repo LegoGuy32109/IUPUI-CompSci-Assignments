@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+  <meta charset = "utf-8">
+  <title>EssayMaker Intro</title>
+  <style type="text/css">
+    body {
+              background-color:#f2f2f2;
+          }
+
+  </style>
+</head>
+
+<body>
+    <h1>Easy Sleasy Essay Maker!!</h1>
+    <form action = "/essayChoice"
+          method = "post">
+        <fieldset>
+            <legend>Your name please:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="grade">Grade:</label><br>
+            <input type="text" id="grade" name="grade" value="Freshman"><br>
+            <label for="class">Class this essay is for:</label><br>
+            <input type="text" id="class" name="class" value="AP Comp">
+        </fieldset>
+        <fieldset>
+            <legend>What is you essay about?</legend>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <h2>IMPORTANT</h2>
+            <h3>Make sure all input has no periods, type in bulletpointed information like the examples</h3>
+            <label for="hook">What cool fact will draw people in? (ex: a male elephant is over 4 tons)</label><br>
+            <input type="text" size = "70" id="hook" name="hook"><br>
+            <label for="introSupport">A follow up idea to that fact. (ex: elephants are the largest land mammals in the world)</label><br>
+            <input type="text" size = "70" id="introSupport" name="introSupport"><br>
+            <label for="thesis">Your thesis, the point you want to prove through this essay. (ex: elephants are the coolest animals ever)</label><br>
+            <input type="text" size = "70" id="thesis" name="thesis">
+        </fieldset>
+        <fieldset>
+            <legend>Body Paragraph One</legend>
+            <p>Now what's a BIG idea about your essay you'll talk about for a paragraph? This could be focusing on an aspect like a cheetah's spots, a character like Mr. Darcy, or the beginning of the story and what notable things happened. (we're not writing this down just think about it)<p>
+            <br>
+            <label for="p1s1">Introduce that idea with a fact about it or describe it. (ex: the elephant's size is quite notable as an animal)</label><br>
+            <input type="text" size = "70" id="p1s1" name="p1s1"><br>
+            <label for="p1s2">Another fact paring nicely with the first one. (ex: an adult can reach over 8 feet tall)</label><br>
+            <input type="text" size = "70" id="p1s2" name="p1s2"><br>
+            <label for="p1s3">Now set up a contradiction that you can answer, like "You may think __ " (ex. a mammal that big is overpowered in the wild)</label><br>
+            <input type="text" size = "70" id="p1s3" name="p1s3"><br>
+            <label for="p1s4">Answer that contradiction, ", but actually __" (ex. the bigger the animal the tougher it is to stay alive)</label><br>
+            <input type="text" size = "70" id="p1s4" name="p1s4"><br>
+            <label for="p1s5">A follow up fact after answering that contradiction. (ex. an elephant needs to consume 50 kilograms of food each day to survive)</label><br>
+            <input type="text" size = "70" id="p1s5" name="p1s5"><br>
+            <label for="p1s6">A concluding statement or fact about your big idea. (ex. that's over 20 tons)</label><br>
+            <input type="text" size = "70" id="p1s6" name="p1s6"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Body Paragraph Two</legend>
+            <p>Think of another BIG idea for your essay, you'll talk about it for this paragraph similar to the one before.</p>
+            <label for="p2s1">Introduce the idea with a transitonal fact, "Speaking of, __" (ex: the tusks of an elephant are actually its teeth)</label><br>
+            <input type="text" size = "70" id="p2s1" name="p2s1"><br>
+            <label for="p2s2">Another fact pairing nicely with the first one. (ex: the tusks can pry bark off trees, dig up roots, or fend off attackers)</label><br>
+            <input type="text" size = "70" id="p2s2" name="p2s2"><br>
+            <label for="p2s3">Now set up a fact with a crazy followup, like "__ and the strangest thing is, __" (ex. they get tusks when they're about 2 years old)</label><br>
+            <input type="text" size = "70" id="p2s3" name="p2s3"><br>
+            <label for="p2s4">Answer that followup, the second __ (ex. tusks continue to grow throughout an elephant's lifetime)</label><br>
+            <input type="text" size = "70" id="p2s4" name="p2s4"><br>
+            <label for="p2s5">See if you can fit this structure for a conclusion with 2 facts, "__, which is why __" (ex. their tusks are made of ivory)</label><br>
+            <input type="text" size = "70" id="p2s5" name="p2s5"><br>
+            <label for="p2s6">Answer that previous structure __ (ex. elephants are unfortunately often poached)</label><br>
+            <input type="text" size = "70" id="p2s6" name="p2s6"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Body Paragraph Three</legend>
+            <p>Final BIG idea for your essay, almost there!!</p>
+            <label for="p3s1">Introduce the idea with a strong fact about your big idea. (ex: elephants have strong familial ties in the wild)</label><br>
+            <input type="text" size = "70" id="p3s1" name="p3s1"><br>
+            <label for="p3s2">Another fact pairing nicely with the first one. (ex: there are reports of elephants forming lifelong friendships with each other)</label><br>
+            <input type="text" size = "70" id="p3s2" name="p3s2"><br>
+            <label for="p3s3">A third fact that goes along with the idea (ex. elephants mourn the deaths of their loved ones)</label><br>
+            <input type="text" size = "70" id="p3s3" name="p3s3"><br>
+            <label for="p3s4">Get two facts to complement each other, like "__, and also __" (ex. an elephant family can range from 3 to 25 elephants)</label><br>
+            <input type="text" size = "70" id="p3s4" name="p3s4"><br>
+            <label for="p3s5">Follow up that fact. (ex. families can form clans from 500 to 1000 elephants)</label><br>
+            <input type="text" size = "70" id="p3s5" name="p3s5"><br>
+            <label for="p3s6">Finish that big idea with a nice, juicy fact. (ex. they aggregate for food, water, and to protect themselves from poachers)</label><br>
+            <input type="text" size = "70" id="p3s6" name="p3s6"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Conclusion</legend>
+            <label for="bi1">Write a fact that summarizes your first big idea in the 1st paragraph. (ex. elephants are huge)</label><br>
+            <input type="text" size = "70" id="bi1" name="bi1"><br>
+            <label for="bi2">Write a fact that summarizes your second big idea in the 2nd paragraph. (ex. their tusks are crazy cool)</label><br>
+            <input type="text" size = "70" id="bi2" name="bi2"><br>
+            <label for="bi3">A fact for your third and you're done baby! (ex. elephants are social animals)</label><br>
+            <input type="text" size = "70" id="bi3" name="bi3"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Let's make that essay!</legend>
+            <button type="submit">Construct Essay</button>
+        </fieldset>
+    </form>
+
+</body>

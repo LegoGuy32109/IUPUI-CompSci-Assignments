@@ -1,0 +1,52 @@
+BMI ALGORITHIM
+
+==GOALS==
+I want to be able to host a website with pages that ask the user for their
+height and weight, and be able to then navigate them to a page that
+displays their BMI along with what that means. Everything should have
+labels so it's clear to the user what they need to do and what's being
+displayed to them.
+
+=INPUTS=
+User puts in height and weight in a page, It's easy if there are two
+inputs for height one for feet and the other inches. People don't always
+like doing mental math. Then it can be calculated into inches anyway at
+the end.
+
+=OUTPUTS=
+That above transitions into a result page that displays the BMI calculated
+from that info. It also says what that BMI means through finding what
+category it's in, overweight, underweight, normal, obese. Should have
+option here for doing it again, or going to homepage through links.
+
+=STEPS=
+Have homepage with link to form
+
+Have form contain <form> tag to enter height (feet and inches) and weight
+in pounds. Make sure each <input> is labeled appropriately.
+
+Have submit button in feild set with all labels and inputs for form page.
+
+Make the form tag action go to /result and call the method post
+
+In result.html make sure it begins with python script that gets the values
+in the inputs and saves it to variables.
+
+Set inches to the value of inches and feet*12
+
+have the var bmi set to       703*pounds/(inches*inches)
+
+create empty string message = ""
+
+check if bmi is in a quadrant through if statement, and set message
+appropriately like "hat's pretty low, your status is underweight" for
+underweight, normal, overweight, and obese. Have each if statement closed
+with end, because bottle is weird.
+
+subtract inches by feet*12 for display
+
+format bmi to a string rounded to 1 decimal point
+
+Have html now display resuls with the variables formatted wiht {{ }}
+
+Inculde links to calculate BMI again or back to home page

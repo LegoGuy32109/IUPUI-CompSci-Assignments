@@ -1,0 +1,11 @@
+#cd ..
+#cd ..
+#pwd
+
+#I was trying to make a shortcut to get to my blackbelt
+#folder, but I figured out aliases and I have this
+#work for me instead
+
+#alias rt="cd cs240/CSCI_spring2021_A1/blackbelt"
+#then I just type rt and it works
+#I also have one set to c, which clears the screen

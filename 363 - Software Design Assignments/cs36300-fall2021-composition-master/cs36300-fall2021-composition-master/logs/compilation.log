@@ -1,0 +1,23 @@
+Generating 'make' output using default input
+Generation Time: 0s
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment2/joshhale/cs36300-fall2021-composition'
+rm -rf driver.o
+rm -rf ./assignment2
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment2/joshhale/cs36300-fall2021-composition'
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment2/joshhale/cs36300-fall2021-composition'
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "driver.o" driver.cpp
+In file included from Stack.h:124:0,
+                 from driver.cpp:10:
+Stack.cpp: In member function ‘const Stack<T>& Stack<T>::operator=(const Stack<T>&)’:
+Stack.cpp:98:3: error: ‘cout’ is not a member of ‘std’
+   std::cout <<"returned self\n";
+   ^
+In file included from Queue.h:105:0,
+                 from driver.cpp:11:
+Queue.cpp: In copy constructor ‘Queue<T>::Queue(const Queue<T>&)’:
+Queue.cpp:23:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << q.array.get(q.dataBegin+i) << " ";
+   ^
+make[1]: *** [driver.o] Error 1
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment2/joshhale/cs36300-fall2021-composition'
+make: *** [assignment2] Error 2

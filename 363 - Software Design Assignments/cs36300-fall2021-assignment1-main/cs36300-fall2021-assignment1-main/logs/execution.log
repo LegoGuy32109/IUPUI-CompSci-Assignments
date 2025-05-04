@@ -1,0 +1,15 @@
+
+=== constructors ===
+
+> default constructor
+> copy constructor
+> fill constructor
+*** error: invaid size
+
+=== (in)equality operators in conjunction with the resize method ===
+
+*** error: array resize method failed
+
+=== search ===
+
+Command '/home/hilljh/cs363-sandbox/assignment1/joshhale/cs36300-fall2021-assignment1/Array' died with <Signals.SIGABRT: 6>.

@@ -1,0 +1,28 @@
+=GOAL=
+I want to make the computer come up with a random number between 1 and
+100, and then I guess, and if I'm wrong, the computer will tell me if I
+should guess higher or lower. When I'm right, it should tell me I got it,
+and how many wrong guess I made.
+
+=INPUTS=
+User inputs numbers as a guess until they reach the random number
+generated and they win hooray!
+
+=OUTPUTS=
+Ask user to guess number, on each guess give feedback whether they should
+guess higher or lower.
+
+=STEPS=
+Generate random number 1-100 to guess and save in var randNum
+
+Make int wrongGuesses = 0
+
+Prompt user to guess a number 1-100 store input in var guess
+
+while loop begins, as long as guess != randNum inc wrongGuess by one and
+continue checking if the guess is higher or lower, and telling the user
+which direction to guess and storing the next input in guess. The loop
+repeats if guess isnt randNum.
+
+When loop finishes, guess is correct, print good job and tell them how
+many wrong guesses they did.

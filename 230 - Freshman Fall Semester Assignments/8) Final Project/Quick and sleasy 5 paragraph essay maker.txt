@@ -1,0 +1,39 @@
+Quick and sleazy 5 paragraph essay maker
+
+Don’t you hate remembering those essays you have to write the day before
+it’s due? Some people have even less time, hours even before a large
+portion of their grade is determined from an exhausting essay. If only
+there was an easier way...
+
+Introducing the quick and sleazy 5 paragraph essay maker, where typing in
+a few simple sentences can be formatted into a beautiful 5-page essay
+quickly on the web! If you ever wish you could write an essay with bullet
+points, this tool can help you turn those facts into a presentable essay
+to your teacher. Just follow the online guide, and bing bang boom an essay
+is born. Disclaimer: don’t submit this for an actual grade.
+
+The intended user is a disgruntled student that understands what they need
+to write about but are tired and feel like an essay is too daunting and
+would appreciate the assistance. They come up with facts about their
+topic, but coming up with transitions, and a general flow to their
+argument is something this program can help with.
+
+When the user starts the program it first needs some info about the essay
+from the user like the thesis, their hook, and some big ideas. Then they
+begin accepting sentences with prompts like “Fact #1 of your essay”
+“Possible contradiction ... answer to contradiction” The user should enter
+their answers plainly, like a bullet point for each pull. The program will
+strip it into the lower case, plugging it into the framework, and
+capitalizing from there. Computationally there will be a function that
+constructs a paragraph, where the parameters determine which paragraph it
+is, Introduction, Body1, Body2, Body3, or Conclusion then append it to the
+essay file as an indented paragraph.
+
+What makes this program a challenge is trying to make it the least robotic
+possible, I have no doubt that my inexperience with computational writing
+will make it difficult for any essay thrown through this program to sound
+human, but maybe a very tired student submitting a paper hours before it’s
+due? I also expect the outcomes to be quite humorous, as I thought this
+program’s results would be more valuable as a laugh than trying to prove a
+point. The deeper purpose of creating this tool is to learn and form
+submission through webpages and computing through server side programming.

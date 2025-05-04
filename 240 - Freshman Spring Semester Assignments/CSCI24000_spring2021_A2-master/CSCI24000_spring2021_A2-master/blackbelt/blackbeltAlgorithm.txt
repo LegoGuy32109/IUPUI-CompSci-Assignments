@@ -1,0 +1,7 @@
+I would like to make a program that lets you type in multiple integers and sorts it for you in neat little array, I could accomplish this by having the user input how many integers they will put in, then have them type each integer seperated by a space.
+
+The scanf() function could then have those values store in an array, then a simple bubble sort later and presto.
+
+The difficulty is making sure the array is created with the right amount of storage when the user asks, and then making sure the input is assigned correctly to the array.
+
+Goodluck to me!

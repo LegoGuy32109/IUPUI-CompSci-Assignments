@@ -1,0 +1,57 @@
+
+<%
+
+from bottle import request
+inches = request.forms.get("inches")
+inches = int(inches)
+feet = request.forms.get("feet")
+feet = int(feet)
+pounds = request.forms.get("pounds")
+pounds = int(pounds)
+
+inches += feet*12
+
+bmi = 703*pounds/(inches*inches)
+
+message = ""
+if(bmi<18.5):
+    message = "That's pretty low, your status is underweight"
+end
+if(bmi<25 and bmi>18.5):
+    message = "Perfectly healthy, your status is normal"
+end
+if(bmi<30 and bmi>25):
+    message = "Uh oh, you're kinda high, status is overweight"
+end
+if(bmi>30):
+    message = "Unfortunate, your status is obese"
+end
+
+inches -= feet*12
+bmi = "{:.1f}".format(bmi)
+%>
+
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+  <title>Conversion result</title>
+  <meta charset = "utf-8">
+</head>
+
+<body>
+  <h1>Body Mass Index:</h1>
+
+  <p>
+      Your height: {{feet}} feet {{ inches }} inches.<br/ >
+      Your weight: {{ pounds }} pounds<br/ >
+      Your cool BMI: {{bmi}} <br/ > <br/ >
+      {{ message }}
+  </p>
+<h3><a href="/bmicalc">Click here to find BMI again</a></h3>
+<h3><a href="/">Click here to go to my Home Page</a></h3>
+
+</body>
+</html>
+
+
+

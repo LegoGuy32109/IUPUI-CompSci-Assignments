@@ -1,0 +1,61 @@
+[joshhale@tesla cs36300-fall2021-assignment1]$ valgrind --leak-check=full ./Array
+==34609== Memcheck, a memory error detector
+==34609== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==34609== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==34609== Command: ./Array
+==34609==
+D D D D D
+==34609== Conditional jump or move depends on uninitialised value(s)
+==34609==    at 0x5CF9AE5: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1296)
+==34609==    by 0x5CEE7E1: fwrite (iofwrite.c:39)
+==34609==    by 0x54F5BB4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib64/libstdc++.so.6.0.19)
+==34609==    by 0x4016DE: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==
+==34609== Syscall param write(buf) points to uninitialised byte(s)
+==34609==    at 0x5D6EA90: __write_nocancel (syscall-template.S:81)
+==34609==    by 0x5CF92F2: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1258)
+==34609==    by 0x5CFAB0D: new_do_write (fileops.c:519)
+==34609==    by 0x5CFAB0D: _IO_do_write@@GLIBC_2.2.5 (fileops.c:495)
+==34609==    by 0x5CF9A4F: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1326)
+==34609==    by 0x5CEE7E1: fwrite (iofwrite.c:39)
+==34609==    by 0x54F5BB4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib64/libstdc++.so.6.0.19)
+==34609==    by 0x54F5EB6: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib64/libstdc++.so.6.0.19)
+==34609==    by 0x40170B: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==  Address 0x402300a is in a rw- anonymous segment
+==34609==
+D D D D D    B
+==34609== Conditional jump or move depends on uninitialised value(s)
+==34609==    at 0x401270: Array::operator==(Array const&) const (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==    by 0x401724: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==
+should be false: 0
+==34609== Conditional jump or move depends on uninitialised value(s)
+==34609==    at 0x401270: Array::operator==(Array const&) const (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==    by 0x401785: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==
+should be true 1
+==34609== Conditional jump or move depends on uninitialised value(s)
+==34609==    at 0x401270: Array::operator==(Array const&) const (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==    by 0x4012A8: Array::operator!=(Array const&) const (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==    by 0x4017C3: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==
+should be false 0
+==34609== Conditional jump or move depends on uninitialised value(s)
+==34609==    at 0x5CF9AE5: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1296)
+==34609==    by 0x5CEE7E1: fwrite (iofwrite.c:39)
+==34609==    by 0x54F5BB4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib64/libstdc++.so.6.0.19)
+==34609==    by 0x40185B: main (in /home/joshhale/cs363/cs36300-fall2021-assignment1/Array)
+==34609==
+ B    D D D D D
+this program works
+==34609==
+==34609== HEAP SUMMARY:
+==34609==     in use at exit: 0 bytes in 0 blocks
+==34609==   total heap usage: 5 allocs, 5 frees, 47 bytes allocated
+==34609==
+==34609== All heap blocks were freed -- no leaks are possible
+==34609==
+==34609== Use --track-origins=yes to see where uninitialised values come from
+==34609== For lists of detected and suppressed errors, rerun with: -s
+==34609== ERROR SUMMARY: 22 errors from 6 contexts (suppressed: 0 from 0)
+

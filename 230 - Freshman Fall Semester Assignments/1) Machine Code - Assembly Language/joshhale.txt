@@ -1,0 +1,43 @@
+;; Josh Hale wrote this
+;; this is not the black belt assignment, can only handle positive
+integers
+begin:
+;; b is how many times begin will run
+lod b
+;; in case b is 0
+jmz end
+;; b is unchanged, only decrease tempCount to compute product
+sto tempCount
+;; a is loaded then checked if 0, if 0 it will end, else it will
+decrement
+lod a
+jmz end
+jmp add
+;; need this lil buffer, only want 'a' decremented once
+add:
+dec
+sto a
+add2
+;; add2 is what's repeated to increase prod
+add2:
+;; increase prod
+lod prod
+inc
+sto prod
+;; check how many times to increase prod, if it's 0 back to beginning
+lod tempCount
+dec
+sto tempCount
+;; when tempCount is 0 back to beginning
+jmz begin
+;; usually repeat add2
+jmp add2
+;; program ends here lol
+end: hlt
+;; prod is the product of a and b
+prod: 0
+;; tempCount is how many times we increment prod, without forgetting b
+tempCount: 0
+;; a and b are the terms this program multiples together
+a: 4
+b: 12

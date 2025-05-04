@@ -1,0 +1,52 @@
+==MISSION STATEMENT==
+This program does will take the cost for a customer, and the customer's
+provided payment, then calculates the difference for change and lists the
+most effective amount of change to give them. Giving the highest value
+bills/coins possible.
+
+=INPUTS=
+1. Double of cost for customer, in $$$, (ex. 24.52)
+2. Double of money given to cashier (should assume greater than cost)
+
+=OUTPUTS=
+1. Indication of change to give, the difference, and the list of
+   bills/coins consisting of this change, ex:
+Change: 27.33
+twenties: 1
+tens: 0
+fives: 1
+ones: 2
+quarters: 1
+dimes: 0
+nickels: 1
+pennies: 3
+
+=STEPS=
+program asks for input on total cost, stores in double 'price'
+this runs in while loop confirming total is valid and double.
+
+program then asks for provided payment, stores in double 'payment'
+this runs in while loop checking payment is enough to cover cost, is a
+double that's valid, etc.
+
+calculate change by finding difference between the two, save in double
+'change', print that amount (now the fun begins)
+
+define dictonary for bills/coins, starting at twenties going to pennies.
+Each dictonary has key 'Twenties' and INT value in pennies '2000'. This
+needs to be DESCENDING ORDER
+
+multiply change by 100 and cast to an integer named 'pennies' (the dict
+key will be uppercase)
+
+loop through the dictonary, printing out the key and how many times that
+value can go into the pennies variable. (subtract that amount from
+pennies) This will display the desired output.
+
+ADDENDUM, I realize this is more complicated and I am expected to write
+something different, I will include a comment of a sequential algorithim
+to prove I understand the concept and will preform the same as the method
+I wrote above. A series of ifs and elifs will check if the pennies amount
+is > 2000, subtract 2000 enough times and print that amount to the screen
+to indicate how many twenties must be given, the move on to check if
+pennies is > 1000 for tens and so on.

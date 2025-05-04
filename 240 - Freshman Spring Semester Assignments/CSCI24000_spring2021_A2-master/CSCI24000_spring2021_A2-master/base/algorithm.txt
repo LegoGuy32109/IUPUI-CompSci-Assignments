@@ -1,0 +1,17 @@
+I am writing my process to solve the bubble sort problem
+
+==GOALS==
+I need this code to run without modifying anything Mr. Harris gave me. I am given an unordered list of integers in an array and I need to sort that array from least to greatest.
+
+==INPUTS== 
+Only the unorganized array of integers in values[]
+
+==OUTPUTS==
+Printing the values in values[] through the printValues() function already defined
+
+==STEPS==
+When sort() is called, a loop needs to go through the array, inside of another loop going through the array, and checking if the 1st element (at the current index) is greater than the 2nd element. 
+
+If that is true, then a temp variable is assigned the value of the greater, and the lesser's value is assigned to the spot where the greater once was. The lesser (2nd position) is now assigned the bigger value.
+
+n^2 times later, the list should be correctly sorted least to greatest.

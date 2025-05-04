@@ -1,0 +1,31 @@
+My essay maker is almost completed. I have the form working with the right
+data being sent to the server and it is processed correctly. Currently, I
+have almost half of the essay generated from user input, but just need to
+add the next body paragraph and conclusion into the maker page so that a
+full essay is created. User input is in text boxes that are formatted like
+a bullet point, "elephants weigh over 2 tons" that the server turns into a
+sentence following an essay's structure "Did you know, elephants weigh
+over 2 tons? It's true." The sentences are formatted into paragraphs by
+separated <p> tags below the title and author name also generated from the
+user's input.
+
+To go more in-depth on how the user is inputting the data, they view
+multiple fieldsets on the essay creation page each with a legend
+describing which part of the essay this input goes through. Inside each
+fieldset are multiple text boxes with labels describing what they need to
+put in each one, along with an example sentence to get the best results
+from the essay. All of this is in a form that has a submit button at the
+bottom.
+
+The next webpage for displaying the essay first loops through each id/name
+from the text boxes that are described in an array, saving each input into
+a dictionary with the id/name as a label for the user's input. Then each
+paragraph is formatted into a string, assigned to a properly named
+variable, and the HTML displays it through separated <p> tags. The title
+and author's name is also displayed in a centered heading above the essay.
+
+The essay is displayed correctly with the current paragraphs displayed, I
+just need to finish the text boxes for the last paragraphs and make the
+page look nicer through some slight CSS manipulation, like changing the
+font to something other than times, but the times will be applied to the
+essay for clarity, and every essay uses the times.

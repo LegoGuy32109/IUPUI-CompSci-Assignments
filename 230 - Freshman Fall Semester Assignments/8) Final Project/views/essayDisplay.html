@@ -1,0 +1,85 @@
+<%
+from bottle import request
+valueArr = ["fname","lname","grade","class","title","hook","introSupport","thesis","p1s1","p1s2","p1s3","p1s4","p1s5","p1s6","p2s1","p2s2","p2s3","p2s4","p2s5","p2s6","p3s1","p3s2","p3s3","p3s4","p3s5","p3s6","bi1","bi2","bi3"]
+essayParts = {}
+
+classVar = request.forms.get("class")
+
+for item in valueArr:
+    essayParts[item] = request.forms.get(item).lower()
+end
+
+bigString = ""
+for key in essayParts:
+   bigString+="{}: {} \n".format(key.upper(),essayParts[key])
+end
+titleWords= essayParts["title"].split()
+title = ""
+for word in titleWords:
+    if len(word) > 2:
+        word = word.capitalize()
+    end
+    title += word +" "
+end
+
+author = "{} {}".format( essayParts["fname"].capitalize(), essayParts["lname"].capitalize() )
+
+firstPara = "Did you know, {}? Yes really, {}, crazy right? This just makes sense when you consider that {}.".format(essayParts["hook"].capitalize(),essayParts["introSupport"],essayParts["thesis"])
+body1 = "It makes you realize that {}. I mean, {}. You may think {}, but actually {}. Interestingly, {}. {}.".format(essayParts["p1s1"], essayParts["p1s2"],essayParts["p1s3"], essayParts["p1s4"], essayParts["p1s5"], essayParts["p1s6"].capitalize() )
+body2 = "Speaking of, {}. {}. {}, and the strangest thing is, {}. {}, which is why {}.".format(essayParts["p2s1"], essayParts["p2s2"].capitalize(), essayParts["p2s3"].capitalize(), essayParts["p2s4"], essayParts["p2s5"].capitalize(), essayParts["p2s6"])
+body3 = "If that's not enough for ya, {}. {}. To add to that, {}. {}, and also {}. {}. If that's not amazing, I don't know what is.".format(essayParts["p3s1"], essayParts["p3s2"].capitalize(), essayParts["p3s3"], essayParts["p3s4"].capitalize(), essayParts["p3s5"], essayParts["p3s6"].capitalize())
+conclusion = "In conclusion, {}. {}. {}. All that is why {}.".format(essayParts["bi1"],essayParts["bi2"].capitalize(),essayParts["bi3"].capitalize(),essayParts["thesis"])
+
+
+%>
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+  <title>Essay Result</title>
+  <meta charset = "utf-8">
+  <style type = "text/css">
+      .title {
+          margin: auto;
+          text-align: center;
+          width: 70%;
+          padding: 5px;
+      }
+      .essay {
+          margin: auto;
+          text-align: left;
+          text-indent: 60px;
+          line-height: 1.6;
+          width: 600px;
+          padding: 5px;
+      }
+      body {
+          background-color:#f2f2f2;
+      }
+  </style>
+</head>
+
+<body>
+  <h1>Your Fabulous Essay:</h1>
+
+  <br>
+  <div id="essay">
+      <h1 class="title">{{ title }}</h1>
+      <h5 class="title">Written by {{author}}</h5>
+      <p class="essay">{{firstPara}}</p>
+      <p class="essay">{{body1}}</p>
+      <p class="essay">{{body2}}</p>
+      <p class="essay">{{body3}}</p>
+      <p class="essay">{{conclusion}}</p>
+      <br>
+      <h5 class="title">This essay is for {{essayParts["grade"].capitalize()}} {{classVar}}</h5>
+
+  </div>
+  <br><br>
+  <h3>Share your essays on our <a href="https://discord.gg/6fwVvv9s85">Discord!</a></h3>
+
+<br>
+<h3><a href="/essayMaker">Click here to make a new essay!</a></h3>
+<h3><a href="/">Click here to go to my Home Page</a></h3>
+
+</body>
+</html>

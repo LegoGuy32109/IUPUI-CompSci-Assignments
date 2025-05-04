@@ -1,0 +1,35 @@
+// $Id: assignment4.mpc ... copied from assignment3.mpc
+
+project (assignment4) {
+  exename = assignment4
+  install = .
+
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    driver.cpp
+    Calculator.cpp
+    Tree_Builder.cpp
+    Add_Operator.cpp
+    Sub_Operator.cpp
+    Mul_Operator.cpp
+    Div_Operator.cpp
+    Mod_Operator.cpp
+    Number.cpp
+    Concrete_Node_Visitor.cpp 
+ }
+
+  Template_Files {
+    Stack.cpp
+    Queue.cpp
+  }
+
+  Header_Files {
+    Component.h
+    Operator.h
+    Eval_Node_Tree.h
+    
+  }
+}

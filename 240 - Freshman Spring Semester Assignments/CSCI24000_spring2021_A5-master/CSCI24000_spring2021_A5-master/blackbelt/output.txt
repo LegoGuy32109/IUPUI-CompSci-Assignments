@@ -1,0 +1,7 @@
+The amount of times is rounded to the nearest 1s
+I have a negative floating point,I have a negative floating point,I have a negative floating point,I have a negative floating point,I have a negative floating point,I have a negative floating point,I have a negative floating point,I have a negative floating point
+yoooo only have two numbers,yoooo only have two numbers,yoooo only have two numbers
+EMPTY LINE
+AMOUNT OF TIMES NEGATIVE
+AMOUNT OF TIMES = 0
+If the program didnt crash, hooray!,If the program didnt crash, hooray!,If the program didnt crash, hooray!

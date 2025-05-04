@@ -1,0 +1,20 @@
+// $Id: assignment3.mpc ... copied from assignment2.mpc
+
+project (assignment3) {
+  exename = assignment3
+  install = .
+
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+	driver.cpp 
+  }
+
+
+  Template_Files {
+    Stack.cpp
+    Queue.cpp
+  }
+}

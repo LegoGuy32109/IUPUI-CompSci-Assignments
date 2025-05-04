@@ -1,0 +1,40 @@
+=GOALS=
+Follow the main function, and get desired output. 4 functions need to
+written, clearDeck(), assignCard(), showDeck(), and showHand(). The trick
+is having each integer value in cardLoc[] record what card it is, and
+which player has it, deck, comp, or player.
+
+=INPUT=
+Have main function run with no edits.
+def main():
+  clearDeck()
+
+  for i in range(5):
+    assignCard(PLAYER)
+    assignCard(COMP)
+
+  showDeck()
+  showHand(PLAYER)
+  showHand(COMP)
+
+=OUTPUT=
+clears the deck, then draws cards to player and computer 5 times. Show the
+deck, which says where every card is including in the players hands, then
+list the cards specific in the players and computers hands.
+
+=STEPS=
+In clearDeck(), run through cardLoc and give it all 0's. It's in the deck.
+
+In assignCard(), depending if player or comp is drawing set val to 1 or 2
+respectfully to a random choice in cardLoc. Check if that card val is 0,
+if not random choice again.
+
+In showDeck(), run through every val in cardLoc[] and interpret which val
+and suit it is. Index % 52 gives which val, % 13 gives which suit. It's
+value 0, 1, or 2 says where it is.
+
+Print each card's val and suit and where it is.
+
+In showHand() interpret which player's hand to show, 1 or 2, and then loop
+through each card location checking if it's that value. If it is, use same
+method in showDeck to find it's suit and value, print that to the screen.

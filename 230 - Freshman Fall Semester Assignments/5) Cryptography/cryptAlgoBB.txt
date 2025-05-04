@@ -1,0 +1,31 @@
+=GOALS=
+I want to spice up my program. I'm going to give the user an option to
+generate a random key, and encode and decode messages through that. Also
+expand functionality for spaces and punctutation in key.
+
+=INPUT=
+User choses they want a new random key from the menu, types '3'
+
+=OUTPUT=
+A message says a new key is generated and shows key, because why not? Now
+when user wants to encode or decode the program uses that key to do it.
+
+=STEPS=
+Expand alpha string to include " .?!'()" and key string to include
+"@#$%^&*"
+
+Add option for user to type '3'
+
+Interpret input 3 to run function newKey()
+
+Create an array from the characters in key
+
+set var newKey to be empty string
+
+loop however long the length of key is, each time find a random choice of
+the array and add it into the string new key, removing the character from
+the array afterwards.
+
+set key to newKey.
+
+Print output statement that it worked and heres the key

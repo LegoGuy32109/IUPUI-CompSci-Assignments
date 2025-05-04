@@ -1,0 +1,42 @@
+=GOALS=
+Let's have the user choose whether they want to guess or have the computer
+guess a number they're thinking of. The computer will say how many guesses
+they can find it in (I'll figure it out in 5 guesses) and then the user
+will answer if they need to go higher, lower, or they got it.
+=INPUTS=
+User choice for what path to take, in the path of the computer guesses
+they'll say what range the number is in, and then continue guessing until
+they find it. The user will say if it needs to be higher, lower, or if
+they found it.
+=OUTPUTS=
+Computer will give their guess (halfway point between range) and take the
+user input for the next guess until they're correct or the user says they
+aren't, then the computer will act confused and say the user did it wrong.
+That will be funny.
+=STEPS=
+user says whether they want to guess or have the computer guess
+
+If they want computer to guess, have the user say the min and max numbers
+for the range the computer should guess between and store it two vars min
+and max
+
+computer will calculate number of maximum guess it would take them through
+dividing by 2 narrowing it down, going to need to use powers of 2 to solve
+that. I'm writing a funtion that will find how many times you can divide
+the range by 2 until you get 0, then you must have found the number. Did
+you know that if you had a range as big as every atom in the universe, it
+would only take you 273 guesses to find it?
+
+computer finds the halfway point between the range Max-min and you say if
+it's higher than that or lower or they got it.
+
+If it's lower, that guess -1 becomes the max.
+
+If it's higer, that guess +1 becomes the min.
+
+The halfway point continues
+
+The while loop looping this only goes for the max guesses calculated until
+the computer insults the user
+
+Alright let's do this

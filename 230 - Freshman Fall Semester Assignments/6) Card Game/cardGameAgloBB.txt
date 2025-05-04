@@ -1,0 +1,24 @@
+=GOALS=
+Use functionality of previous assignment but aple to play war and do a
+magic trick
+
+=INPUT=
+Figure out what the user wants to do
+
+=OUTPUT=
+Play war quickly or have computer wait a few seconds as it preforms magic
+trick
+
+=STEPS=
+Change main function to ask use what they want to do, play war, a magic
+trick, or quit.
+
+If play war, split deck then while loop as each player continue to draw a
+card and check which one is higher. Winner sets both cards to their deck.
+When an index check excepts a ValueError then someone lost, find out who
+and declare the other the winner.
+
+For magic trick list a few cards and have user pick one. After they
+answer, let a randome amount of time pass and reveal what their card is.
+
+For quit, don't recusively end the choice with main() and sign off
